@@ -53,6 +53,18 @@ export type AudioPlayerOptions = {
      * @platform android
      */
     downloadFirst?: boolean;
+    /**
+     * Determines the [cross origin policy](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) used by the underlying native view on web.
+     * If undefined (default), does not use CORS at all. If set to `'anonymous'`, the audio will be loaded with CORS enabled.
+     * Please note that some videos or audio may not play if CORS is enabled, depending on the CDN settings.
+     * If you encounter issues, consider adjusting the `crossOrigin` property.
+     *
+     * > **Note:** This prop is only available on web.
+     *
+     * @platform web
+     * @default undefined
+     */
+    crossOrigin?: 'anonymous' | 'use-credentials';
 };
 /**
  * @deprecated Use `AudioPlayerOptions` instead.
