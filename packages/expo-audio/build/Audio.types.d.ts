@@ -56,7 +56,7 @@ export type AudioPlayerOptions = {
     /**
      * Determines the [cross origin policy](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) used by the underlying native view on web.
      * If undefined (default), does not use CORS at all. If set to `'anonymous'`, the audio will be loaded with CORS enabled.
-     * Please note that some videos or audio may not play if CORS is enabled, depending on the CDN settings.
+     * Please note that some audio may not play if CORS is enabled, depending on the CDN settings.
      * If you encounter issues, consider adjusting the `crossOrigin` property.
      *
      * > **Note:** This prop is only available on web.
